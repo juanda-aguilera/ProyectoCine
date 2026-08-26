@@ -11,7 +11,7 @@ public class Cliente {
     private int visitas;
     private LocalDate fechaUltimaVisita; // controla que solo se cuente 1 visita por dia
 
-    // Constructor parametrizado: un cliente nuevo inicia sin membresia y sin visitas
+    // un cliente nuevo inicia sin membresia y sin visitas
     public Cliente(String nombre, int documento, int edad) {
         this.nombre = nombre;
         this.documento = documento;
@@ -78,12 +78,9 @@ public class Cliente {
         this.fechaUltimaVisita = fecha;
     }
 
-    // Metodo de comportamiento: registra una visita del cliente al cine.
-    // Sin importar cuantas boletas compre el mismo dia, solo se suma UNA
-    // visita por dia. Para llegar a la membresia Premium se necesitan 30
-    // dias distintos con al menos una compra de boleta cada uno.
-    // Devuelve true si la visita se contabilizo (dia nuevo) o false si ese
-    // dia ya se le habia contado una visita.
+    // registra una visita del cliente al cine sin importar cuantas boletas compre el mismo dia, solo se suma UNA
+    // visita por dia. Para llegar a la membresia Premium se necesitan 30 dias distintos con al menos una compra de boleta cada uno.
+    // Devuelve true si la visita se contabilizo (dia nuevo) o false si ese dia ya se le habia contado una visita.
     public boolean registrarVisita() {
         LocalDate hoy = LocalDate.now();
         if (fechaUltimaVisita == null || !fechaUltimaVisita.isEqual(hoy)) {
@@ -94,8 +91,7 @@ public class Cliente {
         return false;
     }
 
-    // Metodo de comportamiento: determina si el cliente ya cumple la
-    // condicion para acceder a la membresia Premium
+    //determina si el cliente ya cumple la condicion para acceder a la membresia Premium
     public boolean puedeObtenerPremium() {
         if (membresia == null) {
             return false;
@@ -103,8 +99,7 @@ public class Cliente {
         return membresia.getTipo().equalsIgnoreCase("BASICA") && this.visitas >= 30;
     }
 
-    // Metodo de comportamiento: calcula el descuento que le corresponde al
-    // cliente sobre un precio dado, segun su membresia. Si no tiene
+    // calcula el descuento que le corresponde al cliente sobre un precio dado, segun su membresia. Si no tiene
     // membresia, no hay descuento.
     public double calcularDescuento(String tipoVenta, double precio) {
         if (membresia == null) {
