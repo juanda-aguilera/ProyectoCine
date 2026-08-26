@@ -1,11 +1,6 @@
 # Sistema de Ventas y Membresías - Cine
 
-Aplicación de consola en Java para gestionar clientes, películas, productos de confitería, membresías y ventas de un cine. La interacción con el usuario se realiza mediante cuadros de diálogo (`JOptionPane`), mientras que los resultados y confirmaciones se imprimen en la consola/salida estándar (`System.out`).
-
 ## Tabla de contenido
-
-- [Requisitos](#requisitos)
-- [Cómo ejecutar la aplicación](#cómo-ejecutar-la-aplicación)
 - [Arquitectura del proyecto](#arquitectura-del-proyecto)
 - [Datos de ejemplo precargados](#datos-de-ejemplo-precargados)
 - [Menú principal](#menú-principal)
@@ -15,26 +10,6 @@ Aplicación de consola en Java para gestionar clientes, películas, productos de
 - [Notas y limitaciones conocidas](#notas-y-limitaciones-conocidas)
 
 ---
-
-## Requisitos
-
-- **JDK 17 o superior** (el código usa *text blocks* `"""..."""`, disponibles desde Java 15+, y se recomienda 17 por estabilidad).
-- Entorno gráfico disponible, ya que la entrada de datos usa `javax.swing.JOptionPane` (ventanas emergentes). No funciona en un servidor sin interfaz gráfica.
-
-## Cómo ejecutar la aplicación
-
-1. Ubica los 6 archivos `.java` dentro de la carpeta de paquete correspondiente:
-   `com/gitb/juandaaguilera/sistemacine/`
-2. Compila:
-   ```bash
-   javac com/gitb/juandaaguilera/sistemacine/*.java
-   ```
-3. Ejecuta la clase principal:
-   ```bash
-   java com.gitb.juandaaguilera.sistemacine.SistemaCine
-   ```
-4. Aparecerá una ventana emergente con el menú principal. Escribe el número de la opción deseada y presiona **Aceptar**.
-5. Los resultados de cada operación (confirmaciones, listados, ventas) se muestran en la **consola**, no en ventanas emergentes. Si ejecutas desde un IDE, revisa la pestaña de salida/consola.
 
 ## Arquitectura del proyecto
 
@@ -76,13 +51,13 @@ Al ejecutar el programa se repite un menú con 11 opciones hasta elegir "Salir":
 | 10 | Mostrar ventas realizadas | Lista todas las ventas hechas en la sesión actual. |
 | 11 | Salir | Termina el programa. |
 
-A continuación, el detalle de cada opción.
+Ahora te explicamos a detalle cada opción.
 
 ### 1. Registrar cliente
 
 Solicita, en orden: **nombre**, **documento** (número) y **edad** (número). Crea un `Cliente` sin membresía (`null`) y con 0 visitas, y lo agrega a la lista de clientes.
 
-> ⚠️ No valida que el documento no esté repetido, ni que los campos numéricos sean válidos: si escribes texto donde se espera un número, el programa lanzará una excepción (`NumberFormatException`) y se detendrá.
+No valida que el documento no esté repetido, ni que los campos numéricos sean válidos: si escribes texto donde se espera un número, el programa lanzará una excepción (`NumberFormatException`) y se detendrá.
 
 ### 2. Registrar nueva película
 
@@ -116,7 +91,7 @@ Solicita: **nombre**, **tipo** (ej. Snack, Bebida, Combo) y **precio**. Lo agreg
 4. Pide la **cantidad**.
 5. Crea una `Venta` tipo `"CONFITERIA"`, calcula subtotal, descuento y total, y la imprime.
 
-> Nota: la venta de confitería **no** registra visita del cliente; solo la compra de boletas cuenta como visita.
+Nota: la venta de confitería **no** registra visita del cliente; solo la compra de boletas cuenta como visita.
 
 ### 7, 8, 9, 10. Mostrar listados
 
