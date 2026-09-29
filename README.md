@@ -16,7 +16,6 @@ aplicando descuentos según la membresía del cliente.
 - [Descripción de cada clase](#descripción-de-cada-clase)
 - [Flujo de uso recomendado](#flujo-de-uso-recomendado)
 - [Cómo ejecutar](#cómo-ejecutar)
-- [Entrega y Git](#entrega-y-git)
 - [Notas y limitaciones conocidas](#notas-y-limitaciones-conocidas)
 
 ---
