@@ -189,28 +189,6 @@ El descuento se calcula con la membresía que el cliente tiene **antes** de la c
 - **NetBeans:** abrir la carpeta como proyecto Maven y ejecutar `SistemaCine`.
 - **Clase principal:** `com.gitb.juandaaguilera.Sistema.SistemaCine`.
 
-## Entrega y Git
-
-La entrega es un único ZIP con esta estructura:
-
-```
-PROYECTO/
- ├── 01_DOCUMENTO/    Documento del proyecto.pdf
- ├── 02_CODIGO/       Proyecto_Java/   (esta carpeta)
- └── 03_PRESENTACION/ Presentacion.pdf
-```
-
-El código debe estar en Git, en una rama llamada `entrega`:
-
-```
-git checkout -b entrega
-git add .
-git commit -m "Segundo corte: herencia, interfaz, excepciones e interfaz grafica"
-git push -u origin entrega
-```
-
-Antes de entregar: comprobar que compila y se ejecuta desde la rama `entrega` y que el contenido del ZIP coincide con lo publicado en Git.
-
 ## Notas y limitaciones conocidas
 
 - **Sin persistencia:** los datos viven solo en memoria; al cerrar el programa se pierden.
