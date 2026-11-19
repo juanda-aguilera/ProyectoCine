@@ -127,8 +127,3 @@ com.gitb.juandaaguilera.Sistema
 5. **Registrar película** y elige una sala: la película nueva pasa a proyectarse en esa sala.
 6. Cierra y vuelve a abrir el programa: **los datos siguen ahí** porque están en la base de datos. Revisa también las tablas en phpMyAdmin.
 7. Prueba entradas inválidas (cantidad 0, letras en el documento, documento inexistente): el programa muestra un mensaje y sigue funcionando.
-
-## Uso de Git
-
-El repositorio contiene el código fuente (no un ZIP), un historial de commits, este README y los paquetes del proyecto.
-Se evalúa el último commit realizado hasta el sábado 21 de noviembre.
